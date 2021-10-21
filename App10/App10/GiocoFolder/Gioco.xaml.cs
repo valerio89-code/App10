@@ -21,5 +21,11 @@ namespace App10
         {
             await Navigation.PushAsync(new App10.Play());
         }
+
+        public void Master()
+        {
+            //metodo aggiunto in branch test
+        }
+
     }
 }
