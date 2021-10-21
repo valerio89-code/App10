@@ -19,5 +19,26 @@ namespace App10
         {
             Navigation.PushAsync(new Gioco());
         }
+
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+            collectionView.ItemsSource = await App.Database.GetPeopleAsync();
+        }
+
+        private async void Button_Clicked_1(object sender, EventArgs e)
+        {
+            if(!string.IsNullOrWhiteSpace(nameEntry.Text) && !string.IsNullOrWhiteSpace(ageEntry.Text))
+            {
+                await App.Database.SavePersonAsync(new Test.Persona()
+                {
+                    Nome = nameEntry.Text,
+                    Età = int.Parse(ageEntry.Text)
+                });
+            }
+
+            nameEntry.Text = ageEntry.Text = "";
+            collectionView.ItemsSource = await App.Database.GetPeopleAsync();
+        }
     }
 }

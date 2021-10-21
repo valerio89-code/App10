@@ -3,8 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="App10.MainPage">
 
-    <StackLayout>
-        <Button Text="Inizia gioco" Clicked="Button_Clicked" />
+    <StackLayout Margin="20,35,20,20">
+        <Entry x:Name="nameEntry"
+               Placeholder="Inserire nome" />
+        <Entry x:Name="ageEntry"
+               Placeholder="Inserire età" />
+        <Button Text="Aggiungi al database"
+                Clicked="Button_Clicked_1" />
+        <CollectionView x:Name="collectionView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Label Text="{Binding Nome}"
+                               FontSize="Medium" />
+                        <Label Text="{Binding Età}"
+                               TextColor="Silver"
+                               FontSize="Small" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </StackLayout>
 
 </ContentPage>
