@@ -133,7 +133,7 @@ namespace App10
 
         private void ShowFinalPageLayout()
         {
-            lbl_clickCounter.IsVisible = false;
+            lbl_clickCounter.IsVisible = true;
             btnClicca.IsVisible = false;
             messaggioFinale.IsVisible = true;
             lbl_Sottotitolo.IsVisible = false;
