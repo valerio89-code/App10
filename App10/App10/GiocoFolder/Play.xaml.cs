@@ -16,7 +16,7 @@ namespace App10
     public partial class Play : ContentPage
     {
         //livelli
-        static readonly Livello Livello1 = new Livello(1, 10);
+        static readonly Livello Livello1 = new Livello(1, 110);
         static readonly Livello Livello2 = new Livello(2, 20);
         static readonly Livello Livello3 = new Livello(3, 30);
         static readonly Livello Livello4 = new Livello(4, 45);
